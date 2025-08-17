@@ -20,13 +20,13 @@ jobs:
             | jq '[.[] | {id, name, full_name, description, html_url, homepage, language, stargazers_count, forks_count, updated_at, topics, visibility, private, fork, owner: {login, avatar_url}, license}]' \
             > src/data/repos.json
 
-   - name: Commit and push
-  env:
-    GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  run: |
-    git config --global user.email "actions@github.com"
-    git config --global user.name "GitHub Actions"
-    git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/keepsake666/portfolio-app.git
-    git add src/data/repos.json
-    git commit -m "Update repos.json [skip ci]" || echo "No changes"
-    git push origin HEAD:main
+      - name: Commit and push
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/keepsake666/portfolio-app.git
+          git add src/data/repos.json
+          git commit -m "Update repos.json [skip ci]" || echo "No changes"
+          git push origin HEAD:main
