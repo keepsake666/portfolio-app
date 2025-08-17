@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";

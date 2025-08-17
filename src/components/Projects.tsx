@@ -219,7 +219,7 @@ const Projects: React.FC = () => {
           <motion.div variants={cardVariants} className="text-center mt-16">
             <NeonButton href="https://github.com" variant="primary">
               <Github className="inline mr-2 h-5 w-5" />
-              Больше проектов на GitHub
+              Другие проекты
             </NeonButton>
           </motion.div>
         </motion.div>
