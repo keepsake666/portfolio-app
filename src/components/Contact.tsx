@@ -5,7 +5,7 @@ import { Mail, Github, MapPin, Send } from "lucide-react";
 import { useGitHubUser } from "../hooks/useGitHub";
 
 const EMAIL = "veselovsa@list.ru";
-const TELEGRAM = "veselovsa"; // только username, без @
+const TELEGRAM = "Ves_Sergey"; // только username, без @
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
