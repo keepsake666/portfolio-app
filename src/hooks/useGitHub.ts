@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { GitHubRepo, GitHubUser } from "../types/github";
-let staticRepos: GitHubRepo[] | null = null;
-try {
-  // @ts-expect-error: Dynamic import for static JSON, only at build time
-  staticRepos = await import("../data/repos.json");
-} catch {
-  /* ignore error if file does not exist */
-}
+import reposData from "../data/repos.json";
 
 const GITHUB_API_BASE = "https://api.github.com";
 const GITHUB_USERNAME = "keepsake666";
@@ -41,12 +35,12 @@ export const useGitHubUser = () => {
 };
 
 export const useGitHubRepos = () => {
-  const [repos, setRepos] = useState<GitHubRepo[]>(staticRepos || []);
-  const [loading, setLoading] = useState(staticRepos ? false : true);
+  const [repos, setRepos] = useState<GitHubRepo[]>(reposData);
+  const [loading, setLoading] = useState(reposData.length === 0);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (staticRepos) return; // если есть статические данные, не делаем fetch
+    if (reposData.length > 0) return; // если есть статические данные, не делаем fetch
     const fetchRepos = async () => {
       try {
         setLoading(true);
