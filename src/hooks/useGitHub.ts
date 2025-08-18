@@ -35,7 +35,8 @@ export const useGitHubUser = () => {
 };
 
 export const useGitHubRepos = () => {
-  const [repos, setRepos] = useState<GitHubRepo[]>(reposData);
+  const repoDescriptions = reposData.filter((repo) => repo.description);
+  const [repos, setRepos] = useState<GitHubRepo[]>(repoDescriptions);
   const [loading, setLoading] = useState(reposData.length === 0);
   const [error, setError] = useState<string | null>(null);
 
@@ -48,7 +49,7 @@ export const useGitHubRepos = () => {
           `${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6&type=public`
         );
         const filteredRepos = response.data.filter(
-          (repo: GitHubRepo) => !repo.private
+          (repo: GitHubRepo) => !repo.private && !repo.description
         );
         setRepos(filteredRepos.slice(0, 6));
         setError(null);
