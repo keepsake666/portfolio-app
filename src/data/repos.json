@@ -1,5 +1,26 @@
 [
   {
+    "id": 1080342303,
+    "name": "vue-TOP-APP",
+    "full_name": "keepsake666/vue-TOP-APP",
+    "description": "Учебный проект по VUE",
+    "html_url": "https://github.com/keepsake666/vue-TOP-APP",
+    "homepage": null,
+    "language": "TypeScript",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2025-10-21T08:26:49Z",
+    "topics": [],
+    "visibility": "public",
+    "private": false,
+    "fork": false,
+    "owner": {
+      "login": null,
+      "avatar_url": null
+    },
+    "license": null
+  },
+  {
     "id": 1039590872,
     "name": "portfolio-app",
     "full_name": "keepsake666/portfolio-app",
@@ -9,7 +30,7 @@
     "language": "TypeScript",
     "stargazers_count": 0,
     "forks_count": 0,
-    "updated_at": "2025-10-21T06:29:18Z",
+    "updated_at": "2025-10-21T07:19:39Z",
     "topics": [],
     "visibility": "public",
     "private": false,
