@@ -78,6 +78,10 @@ html {
   overflow: hidden;
 }
 
+.test {
+  color: red;
+}
+
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
