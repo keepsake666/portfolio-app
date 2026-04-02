@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 /* Custom fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap");
 
 @layer base {
   body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', monospace;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Orbitron", monospace;
   }
 }
 
@@ -40,15 +45,16 @@ html {
 
 /* Custom animations */
 @keyframes neon-glow {
-  0%, 100% {
-    text-shadow: 
+  0%,
+  100% {
+    text-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
   50% {
-    text-shadow: 
+    text-shadow:
       0 0 2px currentColor,
       0 0 5px currentColor,
       0 0 8px currentColor,
@@ -68,6 +74,10 @@ html {
   overflow: hidden;
 }
 
+.test {
+  color: red;
+}
+
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -77,8 +87,12 @@ html {
 
 /* Retro grid animation */
 @keyframes grid-move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
 }
 
 /* Custom gradient backgrounds */
@@ -139,7 +153,7 @@ html {
   .text-6xl {
     font-size: 3rem;
   }
-  
+
   .text-8xl {
     font-size: 4rem;
   }
