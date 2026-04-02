@@ -66,6 +66,10 @@ html {
   animation: neon-glow 2s ease-in-out infinite alternate;
 }
 
+.test2 {
+  color: blue;
+}
+
 /* Line clamp utility */
 .line-clamp-1 {
   display: -webkit-box;
